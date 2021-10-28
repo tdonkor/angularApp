@@ -1,0 +1,24 @@
+
+<div class="main-area">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Value</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngIf="pensionReading">
+      <td>{{pensionReading.id}}</td>
+      <td>{{pensionReading.name}}</td>
+      <td>{{pensionReading.description}}</td>
+      <td>{{pensionReading.value}}</td>
+      <td> <button color="primary" mat-raised-button (click)="editPension(pensionReading)">Edit</button></td>
+      <td> <button color="warn" mat-raised-button (click)="removeReadingDialog(pensionReading.id)">Delete</button></td>
+    </tr>
+    </thead>
+  </table>
+</div>
+

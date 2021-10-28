@@ -1,0 +1,41 @@
+
+.menubar-container {
+
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    padding: 5px;
+    color: black;
+    flex-direction: column;
+
+
+    & > div.title {
+      padding-left: 50px;
+
+    }
+
+    & > div.project-list {
+      padding-left: 20px;
+    }
+
+    button {
+      // text-shadow: 2px 2px 7px #111111;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      display: block;
+      color: blue;
+      width: 90%;
+      font-weight: bold;
+      font-size: medium;
+      padding: 10px;
+      border: lightsteelblue solid;
+      border-radius: 30px;
+      background-color: azure;
+    }
+  h1 {
+    margin-bottom: 100px;
+    text-align: center;
+  }
+}
+
+

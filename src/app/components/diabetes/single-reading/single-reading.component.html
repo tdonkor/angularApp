@@ -1,0 +1,24 @@
+
+<div class="main-area">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Reading</th>
+      <th>Date</th>
+      <th>Time of Day</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngIf="reading">
+      <td>{{reading.id}}</td>
+      <td>{{reading.reading}}</td>
+      <td>{{reading.date}}</td>
+      <td>{{reading.timeOfDay}}</td>
+      <td> <button color="warn" mat-raised-button (click)="removeReadingDialog(reading.id)">Delete</button></td>
+    </tr>
+    </thead>
+  </table>
+  <div>
+    <a routerLink="/diabetes" routerLinkActive="active">Back to list</a>
+  </div>
+</div>

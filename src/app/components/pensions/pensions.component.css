@@ -1,0 +1,34 @@
+.main-area {
+  box-sizing: border-box;
+}
+.main-area .header {
+  font-size: x-large;
+  font-weight: bold;
+  margin: 20px;
+  text-align: left;
+}
+.main-area .table, .main-area th, .main-area td {
+  border: 1px solid black;
+}
+.main-area .table {
+  width: 80%;
+  margin: 10px;
+}
+.main-area .table th, .main-area .table td {
+  padding: 7px 10px 10px 10px;
+}
+.main-area .table th {
+  text-align: left;
+  font-size: large;
+  font-weight: bolder;
+  background-color: blue;
+  color: snow;
+}
+.main-area .table td {
+  font-weight: bold;
+}
+.main-area .table button {
+  color: white;
+}
+
+/*# sourceMappingURL=pensions.component.css.map */

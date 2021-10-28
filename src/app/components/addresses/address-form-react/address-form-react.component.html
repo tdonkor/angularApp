@@ -1,0 +1,156 @@
+
+<div class="form-container">
+    <form [formGroup]=" addressForm" (ngSubmit)="onSubmit()" >
+      <div class="form-group">
+        <label for="Id">Address Id number</label>
+        <input
+          type="number"
+          id="Id"
+          formControlName="Id">
+        <span
+          *ngIf="!addressForm.get('Id').valid && addressForm.get('Id').touched"
+          class="help-block">
+          Please enter a valid Id!</span>
+      </div>
+      <div class="form-group">
+        <label for="Name">Name</label>
+        <input
+          type="text"
+          id="Name"
+          formControlName="Name">
+        <span
+          *ngIf="!addressForm.get('Name').valid && addressForm.get('Name').touched"
+          class="help-block">
+          Please enter a valid Name!</span>
+      </div>
+      <div class="form-group">
+        <label for="Type">Type of Address</label>
+        <select
+          id ="Type"
+          formControlName="Type">
+          <option value="Person">Person</option>
+          <option value="Business">Business</option>
+        </select>
+      </div>
+     <div class="form-group" *ngIf="addressForm.get('Type').value === 'Business'">
+        <label for="Id">Description</label>
+        <input
+          type="text"
+          id="Description"
+          formControlName="Description">
+        <span
+          *ngIf="!addressForm.get('Description').valid && addressForm.get('Description').touched"
+          class="help-block">
+          Please enter a valid Description!</span>
+      </div>
+      <div class="form-group" *ngIf="addressForm.get('Type').value === 'Person'" >
+        <label for="DOB">Date of Birth</label>
+        <input
+          type="date"
+          id="DOB"
+          formControlName="DOB">
+        <span
+          *ngIf="!addressForm.get('DOB').valid && addressForm.get('DOB').touched"
+          class="help-block">
+          Please enter a valid Date of Birth!</span>
+      </div>
+      <div class="form-group">
+        <label for="Number">House/Business Number</label>
+        <input
+          type="number"
+          id="Number"
+          formControlName="Number">
+        <span
+          *ngIf="!addressForm.get('Number').valid && addressForm.get('Number').touched"
+          class="help-block">
+          Please enter a valid Number!</span>
+      </div>
+      <div class="form-group">
+        <label for="Street">Street Name</label>
+        <input
+          type="text"
+          id="Street"
+          formControlName="Street">
+        <span
+          *ngIf="!addressForm.get('Street').valid && addressForm.get('Street').touched"
+          class="help-block">
+          Please enter a valid Street!</span>
+      </div>
+      <div class="form-group">
+        <label for="City">City</label>
+        <input
+          type="text"
+          id="City"
+          formControlName="City">
+        <span
+          *ngIf="!addressForm.get('City').valid && addressForm.get('City').touched"
+          class="help-block">
+          Please enter a valid City!</span>
+      </div>
+      <div class="form-group">
+        <label for="County">County</label>
+        <input
+          type="text"
+          id="County"
+          formControlName="County">
+        <span
+          *ngIf="!addressForm.get('County').valid && addressForm.get('County').touched"
+          class="help-block">
+          Please enter a valid County!</span>
+      </div>
+      <div class="form-group">
+        <label for="Postcode">Postcode</label>
+        <input
+          type="text"
+          id="Postcode"
+          formControlName="Postcode">
+        <span
+          *ngIf="!addressForm.get('Postcode').valid && addressForm.get('Postcode').touched"
+          class="help-block">
+          Please enter a valid Postcode!</span>
+      </div>
+      <div class="form-group">
+        <label for="Phone">Phone</label>
+        <input
+          type="text"
+          id="Phone"
+          formControlName="Phone">
+        <span
+          *ngIf="!addressForm.get('Phone').valid && addressForm.get('Phone').touched"
+          class="help-block">
+          Please enter a valid Phone!</span>
+      </div>
+      <div class="form-group">
+        <label for="Email">Email</label>
+        <input
+          type="text"
+          id="Email"
+          formControlName="Email">
+        <span
+          *ngIf="!addressForm.get('Email').valid && addressForm.get('Email').touched"
+          class="help-block">
+          Please enter a valid Email!</span>
+      </div>
+      <span
+       *ngIf="!addressForm.valid && addressForm.touched"
+      class="help-block">
+         Please enter valid Data!</span>
+      <div class="save-button"  *ngIf="update === false">
+        <button
+          color="primary"
+          mat-raised-button
+          type="submit"
+          [disabled]="!addressForm.valid">
+          Save</button>
+      </div>
+      <div class="save-button" *ngIf="update === true">
+        <button
+          color="Warn"
+          mat-raised-button
+          type="submit"
+          [disabled]="!addressForm.valid">
+          Update</button>
+      </div>
+  </form>
+</div>
+

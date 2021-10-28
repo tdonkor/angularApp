@@ -1,0 +1,51 @@
+
+<div class="main-area">
+<!--  <div class="header">{{title}}</div>-->
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th *ngIf="address && address.type == 'Person'">DOB</th>
+      <th *ngIf="address && address.type == 'Business'">Description</th>
+      <th>Number</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>County</th>
+      <th>Postcode</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngIf="address && address.type == 'Person'">
+      <td>{{address.id}}</td>
+      <td>{{address.name}}</td>
+      <td>{{address.dOB}}</td>
+      <td>{{address.number}}</td>
+      <td>{{address.street}}</td>
+      <td>{{address.city}}</td>
+      <td>{{address.county}}</td>
+      <td>{{address.postcode}}</td>
+      <td>{{address.phone}}</td>
+      <td>{{address.email}}</td>
+      <td> <button color="primary" mat-raised-button (click)="editAddress(address)">Edit</button></td>
+      <td> <button color="warn" mat-raised-button (click)="removeReadingDialog(address.id)">Delete</button></td>
+    </tr>
+    <tr *ngIf="address && address.type == 'Business'">
+      <td>{{address.id}}</td>
+      <td>{{address.name}}</td>
+      <td>{{address.description}}</td>
+      <td>{{address.number}}</td>
+      <td>{{address.street}}</td>
+      <td>{{address.city}}</td>
+      <td>{{address.county}}</td>
+      <td>{{address.postcode}}</td>
+      <td>{{address.phone}}</td>
+      <td>{{address.email}}</td>
+      <td> <button color="primary" mat-raised-button (click)="editAddress(address)">Edit</button></td>
+      <td> <button color="warn" mat-raised-button (click)="removeReadingDialog(address.id)">Delete</button></td>
+    </tr>
+    </thead>
+  </table>
+</div>

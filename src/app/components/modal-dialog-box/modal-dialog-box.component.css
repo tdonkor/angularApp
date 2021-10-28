@@ -1,0 +1,9 @@
+.dialog-box mat-dialog-content .total {
+  font-size: x-large;
+  font-weight: bold;
+}
+.dialog-box p {
+  font-size: large;
+}
+
+/*# sourceMappingURL=modal-dialog-box.component.css.map */

@@ -1,0 +1,19 @@
+.header-title {
+  font-size: xxx-large;
+  text-shadow: 2px 2px 7px #111111;
+  margin: auto;
+}
+
+.navbar {
+  height: 100%;
+  background-color: slateblue;
+}
+.navbar a:link, .navbar a:visited {
+  color: white;
+  text-decoration: underline;
+}
+.navbar a:link:active, .navbar a:visited:active {
+  color: red;
+}
+
+/*# sourceMappingURL=header.component.css.map */

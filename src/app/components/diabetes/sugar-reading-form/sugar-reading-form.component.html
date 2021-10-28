@@ -1,0 +1,57 @@
+<!--<p> Add a new reading to the database</p>-->
+<div class="form-container">
+  <form (ngSubmit)="onSubmit()"  #f="ngForm">
+    <div ngModelGroup="userData">
+      <div class="form-item">
+        <label for="Id">Reading Id number</label>
+        <input
+          type="number"
+          id="Id"
+          [(ngModel)] = "sugarReadings"
+          name="Id"
+          required
+          #id="ngModel">
+        <span class="help-block" *ngIf="!id.valid && id.touched">Please enter a valid Id number</span>
+      </div>
+      <div class="form-item">
+        <label for="Reading">Reading value</label>
+        <input
+          type="number"
+          id="Reading"
+          ngModel
+          name="Reading"
+          required
+          #Reading="ngModel">
+        <span class="help-block" *ngIf="!Reading.valid && Reading.touched">Please enter a valid reading</span>
+      </div>
+      <div class="form-item">
+        <label for="Date">Date of reading</label>
+        <input
+          type="text"
+          id="Date"
+          ngModel
+          name="Date"
+          required>
+      </div>
+      <div class="form-item">
+        <label for="TimeOfDay">Reading time of day</label>
+        <select
+          id ="TimeOfDay"
+          ngModel
+          name="TimeOfDay">
+          <option value="Morning">Morning</option>
+          <option value="Afternoon">Afternoon</option>
+          <option value="Evening">Evening</option>
+        </select>
+      </div>
+      <div>
+        <button
+          color="primary"
+          mat-raised-button
+          type="submit"
+          [disabled]="!f.valid">
+          Save</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,61 @@
+<div class="form-container">
+    <form [formGroup]="readingForm" (ngSubmit)="onSubmit()" >
+      <div  class="form-group">
+        <label for="Id"> Id number</label>
+        <input
+          type="number"
+          id="Id"
+          formControlName="Id">
+<!--        <span-->
+<!--          *ngIf="!readingForm.get('Id').valid && readingForm.get('Id').touched"-->
+<!--          class="help-block">-->
+<!--          Please enter a valid Id!</span>-->
+      </div>
+      <div class="form-group">
+        <label for="Reading">Reading</label>
+        <input
+          type="number"
+          id="Reading"
+          formControlName="Reading">
+        <span
+          *ngIf="!readingForm.get('Reading').valid && readingForm.get('Reading').touched"
+          class="help-block">
+          Please enter a valid Reading!</span>
+      </div>
+      <div class="form-group">
+        <label for="Date">Date of Reading</label>
+        <input
+          type="date"
+          id="Date"
+          formControlName="Date">
+      </div>
+      <div class="form-group">
+        <label for="TimeOfDay">Time of Day</label>
+        <select
+          id ="TimeOfDay"
+          formControlName="TimeOfDay">
+          <option value="Morning">Morning</option>
+          <option value="Afternoon">Afternoon</option>
+          <option value="Evening">Evening</option>
+        </select>
+      </div>
+
+      <div class="save-button"  *ngIf="update === false">
+        <button
+          color="primary"
+          mat-raised-button
+          type="submit"
+          [disabled]="!readingForm.valid">
+          Save</button>
+      </div>
+      <div class="save-button"  *ngIf="update === true">
+        <button
+          color="Primary"
+          mat-raised-button
+          type="submit"
+          [disabled]="!readingForm.valid">
+          Update</button>
+      </div>
+    </form>
+  </div>
+

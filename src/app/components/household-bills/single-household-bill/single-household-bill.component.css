@@ -1,0 +1,31 @@
+.main-area {
+  box-sizing: border-box;
+}
+.main-area .table, .main-area th, .main-area td {
+  border: 1px solid black;
+}
+.main-area .table {
+  width: 80%;
+  margin: 50px;
+  -moz-box-shadow: 10px 10px 10px 10px #777777;
+  -webkit-box-shadow: 10px 10px 10px 10px #777777;
+  box-shadow: 10px 10px 10px 10px #777777;
+}
+.main-area .table th, .main-area .table td {
+  padding: 7px 10px 10px 10px;
+}
+.main-area .table th {
+  text-align: left;
+  font-size: large;
+  font-weight: bolder;
+  background-color: slateblue;
+  color: snow;
+}
+.main-area .table td {
+  font-weight: bold;
+}
+.main-area .table button {
+  color: white;
+}
+
+/*# sourceMappingURL=single-household-bill.component.css.map */

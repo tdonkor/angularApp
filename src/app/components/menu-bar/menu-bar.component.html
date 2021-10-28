@@ -1,0 +1,39 @@
+<div class="menubar-container">
+
+  <!-- loop through the list of contents on the menu -->
+  <h1>Menu List</h1>
+  <div class="project-list">
+    <button (click)="getSugarList()" >Display Sugar Readings List</button>
+<!--       *ngFor= "let sugar of sugarReadings">-->
+<!--    <ul>-->
+<!--      <li routerLinkActive="title-background"><a [routerLink]= sugar.id >{{ sugar.name }} </a></li>-->
+<!--    </ul>-->
+  </div>
+  <div class="project-list">
+    <button (click)="getAddressList()" >Display Address List</button>
+<!--  <h2>Addresses Menu</h2>-->
+<!--  <div class="project-list"-->
+<!--       *ngFor= "let address of addresses">-->
+<!--    <ul>-->
+<!--      <li routerLinkActive="title-background"><a [routerLink]= address.id >{{ address.name }} </a></li>-->
+<!--    </ul>-->
+  </div>
+  <div class="project-list">
+    <button (click)="getBillsList()" >Display Household Bills List</button>
+<!--  <h2>Household Bills Menu</h2>-->
+<!--  <div class="project-list"-->
+<!--       *ngFor= "let bill of bills">-->
+<!--    <ul>-->
+<!--      <li routerLinkActive="title-background"><a [routerLink]= bill.id >{{ bill.name }} </a></li>-->
+<!--    </ul>-->
+  </div>
+<!--  <h2>Pensions Menu</h2>-->
+
+  <div class="project-list">
+    <button (click)="getPensionsList()">Display Pensions List</button>
+<!--       *ngFor= "let pen of pensions">-->
+<!--    <ul>-->
+<!--      <li routerLinkActive="title-background"><a [routerLink]= pen.id >{{ pen.name }} </a></li>-->
+<!--    </ul>-->
+  </div>
+</div>

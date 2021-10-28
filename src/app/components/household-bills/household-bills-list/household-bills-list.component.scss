@@ -1,0 +1,107 @@
+.main-area {
+  box-sizing: border-box;
+
+  .title-area{
+    width: 80%;
+    background-color: lightsteelblue;
+    margin: 10px auto;
+    padding: 2px 0 2px 0;
+
+    p {
+      padding-left: 20px;
+      font-size: x-large;
+      font-weight: bold;
+      color: azure;
+      text-shadow: 2px 2px 7px #111111;
+    }
+
+    button {
+      display: inline-block;
+      padding: 15px 25px;
+      margin: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      background-color: azure;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+      color: blue;
+    }
+
+  }
+
+  table-size, th, td {
+    border: 1px solid black;
+
+  }
+  .table-size {
+    width: 80%;
+    margin: 10px auto;
+    -moz-box-shadow: 10px 10px 10px 10px #777777;
+    -webkit-box-shadow: 10px 10px 10px 10px #777777;
+    box-shadow: 10px 10px 10px 10px #777777;
+
+
+    th, td {
+      padding: 7px 10px 10px 10px;
+    }
+
+    th {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+
+      text-align: left;
+      font-size: x-large;
+      font-weight: bolder;
+      background-color: slateblue;
+      color: snow;
+    }
+    td {
+      font-weight: bold;
+
+      .id-choosen {
+        color: red;
+      }
+
+
+    }
+
+    tr:nth-child(odd) {
+      background-color: paleturquoise;
+    }
+    .bill-total{
+      font-size: large;
+      color: white;
+      background-color: slateblue;
+      text-shadow: 2px 2px 7px #111111;
+
+    }
+    .bill-wage{
+      font-size: large;
+      color: white;
+      background-color: slateblue;
+      text-shadow: 2px 2px 7px #111111;
+
+      mat-label {
+        color: white;
+        font-size: x-large;
+      }
+
+      button {
+        margin: 0 10px 0 10px;
+        display: inline-block;
+        font-size: x-large;
+        color: white;
+        // background-color: blue;
+
+      }
+
+    }
+  }
+}
+

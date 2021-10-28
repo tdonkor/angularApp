@@ -1,0 +1,56 @@
+
+<div class="billformReact-container">
+  <form [formGroup]="householdBillsForm" (ngSubmit)="onSubmit()" >
+      <div  class="form-group" >
+        <label for="Id"> Id number</label>
+        <input
+          type="number"
+          id="Id"
+          formControlName="Id">
+        <span
+          *ngIf="!householdBillsForm.get('Id').valid && householdBillsForm.get('Id').touched"
+          class="help-block">
+          Please enter a valid Id!</span>
+      </div>
+      <div class="form-group">
+        <label for="Name">Name of bill</label>
+        <input
+          type="text"
+          id="Name"
+          formControlName="Name">
+        <span
+          *ngIf="!householdBillsForm.get('Name').valid && householdBillsForm.get('Name').touched"
+          class="help-block">
+          Please enter a valid Id!</span>
+      </div>
+      <div class="form-group">
+        <label for="Value">Bill value</label>
+        <input
+          type="number"
+          id="Value"
+          formControlName="Value">
+        <span
+          *ngIf="!householdBillsForm.get('Value').valid && householdBillsForm.get('Value').touched"
+          class="help-block">
+          Please enter a valid Id!</span>
+      </div>
+      <div class="save-button"  *ngIf="update === false">
+        <button
+          color="primary"
+          mat-raised-button
+          type="submit"
+          [disabled]="!householdBillsForm.valid">
+          Save</button>
+      </div>
+      <div class="save-button" *ngIf="update === true ">
+        <button
+          color="Warn"
+          mat-raised-button
+          type="submit"
+          [disabled]="!householdBillsForm.valid">
+          Update</button>
+      </div>
+  </form>
+</div>
+
+

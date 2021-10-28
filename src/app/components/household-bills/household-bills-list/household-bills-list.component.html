@@ -1,0 +1,43 @@
+<div class="main-area">
+  <div class ="title-area">
+    <p>Number of Household Bills: {{ nunOfBills }}</p>
+    <button (click)="addNewReading()" >Add New Bill Details
+    </button>
+  </div>
+  <table class="table-size">
+    <thead>
+    <tr>
+      <!--calls the sort function on a click on the table header-->
+      <th>Id</th>
+      <th>Name of Household Bill</th>
+      <th>Value of Household Bill</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let bill of billsList ">
+      {{ calculateOBillsTotal(billsList) }}
+      {{ calculateNumOfBills(billsList.length) }}
+      <td>
+      <a class="id-choosen" [routerLink] = "['/singleBill', bill.id]">
+        {{ bill.id}}
+      </a>
+      </td>
+      <td>{{bill.name}}</td>
+      <td>{{bill.value}}</td>
+    </tr>
+    <tr *ngIf="!billsList || !billsList.length">
+      <td colspan="3">No Results found</td>
+    </tr>
+    <tr>
+      <td class="bill-total" colspan="2" >Total monthly outlay: £{{ billsTotal  | number : '1.2-2' }}  </td>
+      <td class="bill-wage">
+
+        <mat-form-field class="bill-wage">
+          <mat-label>Enter monthly wage</mat-label>
+          <input  [(ngModel)]="wage"  matInput placeholder="0">
+        </mat-form-field>
+
+        <button  color="accent" mat-raised-button [disabled]="wage <= 0" (click)="calculateDialogEndMonth(billsTotal, wage)">Sum</button>
+      </td>
+    </tr>
+  </table>
+</div>

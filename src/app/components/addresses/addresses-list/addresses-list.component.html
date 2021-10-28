@@ -1,0 +1,31 @@
+<div class="main-area">
+  <div class ="title-area">
+    <p>Number of addresses: {{numOfAddresses}}</p>
+    <button (click)="addNewReading()" >Add New Address
+    </button>
+  </div>
+  <table class="table-size">
+    <thead>
+    <tr>
+      <!--calls the sort function on a click on the table header-->
+      <th>Id</th>
+      <th>Address Name</th>
+      <th>Type of Address</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let item of addressList">
+      {{ calculateNumOfAddresses(addressList.length) }}
+      <td>
+        <a class="id-choosen" [routerLink] = "['/singleAddress', item.id]">
+    {{ item.id}}
+    </a>
+      </td>
+      <td>{{item.name}}</td>
+      <td>{{item.type}}</td>
+    </tr>
+    <tr *ngIf="!addressList || !addressList.length">
+      <td colspan="3">No Results found</td>
+    </tr>
+  </table>
+</div>
+

@@ -1,0 +1,42 @@
+<h1>Welcome to the Login Form</h1>
+<div class="form-container">
+  <form  #authForm="ngForm" (ngSubmit)="onSubmit(authForm)"  >
+    <mat-toolbar color="primary">
+      App Login Form
+    </mat-toolbar>
+    <div ngModelGroup="userData">
+      <div class="form-item">
+        <label for="Email">E-Mail</label>
+        <input
+          type="text"
+          id="Email"
+          ngModel
+          name="Email"
+          required
+          email
+          #Email="ngModel">
+        <span class="help-block" *ngIf="!Email.valid && Email.touched">Please enter a valid Email</span>
+      </div>
+      <div class="form-item">
+        <label for="Password">Password</label>
+        <input
+          type="password"
+          id="Password"
+          ngModel
+          name="Password"
+          required
+          minlength="6"
+          #Password="ngModel">
+        <span class="help-block" *ngIf="!Password.valid && Password.touched">Please enter a valid Password</span>
+      </div>
+      <div>
+        <button
+          color="warn"
+          mat-raised-button
+          type="submit"
+          [disabled]="!authForm.valid">
+          Login</button>
+      </div>
+    </div>
+  </form>
+</div>

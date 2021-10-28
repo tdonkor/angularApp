@@ -1,0 +1,36 @@
+.form-container {
+  box-sizing: border-box;
+  border: solid black;
+  height: 40%;
+  width: 40%;
+  margin: 50px auto;
+  align-content: space-evenly;
+  background-color: lightsteelblue;
+}
+.form-container .form-item {
+  width: 70%;
+  display: flex;
+  color: black;
+  flex-direction: column;
+  padding: 20px 0 0 10px;
+}
+.form-container .form-item label {
+  font-weight: bold;
+}
+.form-container button {
+  margin: 50px 10px 10px 10px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.help-block {
+  color: red;
+}
+
+h1 {
+  text-align: center;
+}
+
+/*# sourceMappingURL=auth.component.css.map */

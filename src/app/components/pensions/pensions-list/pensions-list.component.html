@@ -1,0 +1,37 @@
+<div class="main-area">
+
+  <div class ="title-area">
+    <p>Number of Pensions: {{ nunOfPensions }}</p>
+    <button (click)="addNewReading()" >Add New Pension Details
+    </button>
+  </div>
+<table class="table-size">
+  <thead>
+  <tr>
+    <!--calls the sort function on a click on the table header-->
+    <th>Id</th>
+    <th>Pension Name</th>
+    <th>Pension Description</th>
+    <th>Pension Value</th>
+  </tr>
+  </thead>
+  <tr *ngFor="let pen of pensionsList ">
+    {{ calculatePensionsTotal(pensionsList) }}
+    {{ calculateNumOfBills(pensionsList.length) }}
+    <td>
+      <a class="id-choosen" [routerLink] = "['/singlePension', pen.id]">
+        {{ pen.id}}
+      </a>
+    </td>
+    <td>{{pen.name}}</td>
+    <td>{{pen.description}}</td>
+    <td>{{pen.value}}</td>
+  </tr>
+  <tr *ngIf="!pensionsList || !pensionsList.length">
+    <td colspan="3">No Results found</td>
+  </tr>
+  <tr>
+    <td class="pension-total" colspan="4">Total amount: £{{ pensionTotal  | number : '1.2-2' }} <span class="date-time">Date: {{dateTime.toLocaleDateString()}}</span></td>
+  </tr>
+</table>
+</div>

@@ -1,0 +1,45 @@
+.form-container {
+  box-sizing: border-box;
+  border: solid black;
+  height: 55%;
+  width: 30%;
+  margin: 100px auto;
+  align-content: space-evenly;
+  background-color: lightsteelblue;
+  -moz-box-shadow: 10px 10px 10px 10px #777777;
+  -webkit-box-shadow: 10px 10px 10px 10px #777777;
+  box-shadow: 10px 10px 10px 10px #777777;
+  border-radius: 30px;
+  padding: 20px;
+}
+.form-container .form-item {
+  width: 50%;
+  display: flex;
+  color: black;
+  flex-direction: column;
+  padding: 10px;
+}
+.form-container .form-item label {
+  font-weight: bold;
+}
+.form-container button {
+  margin: 50px 10px 10px 10px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.help-block {
+  color: red;
+}
+
+p {
+  padding-left: 20px;
+  font-size: xx-large;
+  font-weight: bold;
+  color: blue;
+  text-shadow: 2px 2px 7px #111111;
+}
+
+/*# sourceMappingURL=sugar-reading-form.component.css.map */
