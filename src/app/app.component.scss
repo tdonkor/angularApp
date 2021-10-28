@@ -1,0 +1,66 @@
+// defines the container size of the webpage
+// defines the individual areas on the container, main page, header,
+// menu, mains section and footer to come later
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 20% 80% ;
+  grid-template-rows: 10% 90%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+  border: black solid;
+  border-radius: 10px;
+
+  & > div.head {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+
+  & > div.menubar-container {
+    grid-column-start: 1;
+
+    & > div.inner-container {
+      margin: 15px;
+      height: 95%;
+      width: 90%;
+      border: 10px lightsteelblue solid;
+      border-radius: 10px;
+     // background-image: linear-gradient( lightcyan, lightblue);
+      background-image: radial-gradient(lightcyan, lightgrey, lightblue);
+
+       }
+    }
+
+  & > div.main {
+
+    grid-column-start: 2;
+
+    & > div.inner-main {
+     // background-image: linear-gradient( lightcyan, lightblue);
+      background-image: radial-gradient(circle, lightcyan, lightgray, lightblue);
+      margin: 15px;
+      border:  solid lightsteelblue  10px;
+      height: 95%;
+      overflow-y: auto;
+      overflow-x: auto;
+      border-radius: 10px;
+    }
+
+
+  }
+  //
+  //& > div.foot {
+  //  background: lightblue;
+  //  grid-column-start: 1;
+  //  grid-column-end: 4;
+  //  border: black solid;
+  //}
+
+  /*background-image: url("src/assets/images/marble_background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;*/
+
+
+}

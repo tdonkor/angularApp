@@ -1,0 +1,158 @@
+
+<div class="form-container">
+  <form (ngSubmit)="onSubmit()"  #add="ngForm">
+<!--    <mat-toolbar color="primary">-->
+<!-- -->
+<!--    </mat-toolbar>-->
+    <div ngModelGroup="userData">
+      <div class="form-item">
+        <label for="Id">Address Id number</label>
+        <input
+          type="number"
+          id="Id"
+          [(ngModel)]="newAddress.id"
+          name="Id"
+          required
+          #id="ngModel">
+        <span class="help-block" *ngIf="!id.valid && id.touched">Please enter a valid Id number</span>
+      </div>
+      <div class="form-item">
+        <label for="Name">Name</label>
+        <input
+          type="text"
+          id="Name"
+          [(ngModel)]="newAddress.name"
+          name="Name"
+          required
+          #Name="ngModel">
+        <span class="help-block" *ngIf="!Name.valid && Name.touched">Please enter a Name</span>
+      </div>
+      <div class="form-item">
+        <label for="Type">Type of Address</label>
+        <select
+          id ="Type"
+          [(ngModel)]="newAddress.type"
+          name="Type">
+          <option value="Person">Person</option>
+          <option value="Business">Business</option>
+        </select>
+      </div>
+      <div class="form-item" *ngIf="newAddress.type === 'Business'">
+        <label for="Id">Description</label>
+        <input
+          type="text"
+          id="Description"
+          [(ngModel)]="newAddress.description"
+          name="Description"
+          required
+          #id="ngModel">
+        <span class="help-block" *ngIf="!id.valid && id.touched">Please enter a Description</span>
+      </div>
+      <div class="form-item" *ngIf="newAddress.type === 'Person'" >
+        <label for="DOB">Date of Birth</label>
+        <input
+          type="date"
+          id="DOB"
+          [(ngModel)]="newAddress.dOB"
+          name="DOB"
+          required>
+      </div>
+      <div class="form-item">
+        <label for="Number">House/Business Number</label>
+        <input
+          type="number"
+          id="Number"
+          [(ngModel)]="newAddress.number"
+          name="Number"
+          required
+          #Reading="ngModel">
+        <span class="help-block" *ngIf="!Reading.valid && Reading.touched">Please enter a valid Number</span>
+      </div>
+      <div class="form-item">
+        <label for="Street">Street Name</label>
+        <input
+          type="text"
+          id="Street"
+          [(ngModel)]="newAddress.street"
+          name="Street"
+          required
+          #id="ngModel">
+        <span class="help-block" *ngIf="!id.valid && id.touched">Please enter a Street name</span>
+      </div>
+      <div class="form-item">
+        <label for="City">City</label>
+        <input
+          type="text"
+          id="City"
+          [(ngModel)]="newAddress.city"
+          name="City"
+          required
+          #id="ngModel">
+        <span class="help-block" *ngIf="!id.valid && id.touched">Please enter a City</span>
+      </div>
+      <div class="form-item">
+        <label for="County">County</label>
+        <input
+          type="text"
+          id="County"
+          [(ngModel)]="newAddress.county"
+          name="County"
+          required
+          #id="ngModel">
+        <span class="help-block" *ngIf="!id.valid && id.touched">Please enter a County</span>
+      </div>
+      <div class="form-item">
+        <label for="Postcode">Postcode</label>
+        <input
+          type="text"
+          id="Postcode"
+          [(ngModel)]="newAddress.postcode"
+          name="Postcode"
+          required
+          #id="ngModel">
+        <span class="help-block" *ngIf="!id.valid && id.touched">Please enter a Postcode</span>
+      </div>
+      <div class="form-item">
+        <label for="Phone">Phone</label>
+        <input
+          type="text"
+          id="Phone"
+          [(ngModel)]="newAddress.phone"
+          name="Phone"
+          required
+          #id="ngModel">
+        <span class="help-block" *ngIf="!id.valid && id.touched">Please enter a Phone Number</span>
+      </div>
+      <div class="form-item">
+        <label for="Email">Email</label>
+        <input
+          type="text"
+          id="Email"
+          [(ngModel)]="newAddress.email"
+          name="Email"
+          required
+          email
+          #id="ngModel">
+        <span class="help-block" *ngIf="!id.valid && id.touched">Please enter an Email</span>
+      </div>
+      <div class="save-button"  *ngIf="update === undefined">
+        <button
+          color="primary"
+          mat-raised-button
+          type="submit"
+          [disabled]="!add.valid">
+          Save</button>
+      </div>
+      <div class="save-button" *ngIf="update !== undefined">
+        <button
+          color="Warn"
+          mat-raised-button
+          type="submit"
+          [disabled]="!add.valid">
+          Update</button>
+      </div>
+
+    </div>
+  </form>
+</div>
+
